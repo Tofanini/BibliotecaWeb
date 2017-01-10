@@ -10,60 +10,60 @@
 namespace BibliotecaWeb {
     
     
-    public partial class CadastrarPerfil {
+    public partial class ReservaLivro {
         
         /// <summary>
-        /// nomeLabel control.
+        /// idLivro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label nomeLabel;
+        protected global::System.Web.UI.WebControls.Label idLivro;
         
         /// <summary>
-        /// nomeTextBox control.
+        /// idLivroTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nomeTextBox;
+        protected global::System.Web.UI.WebControls.TextBox idLivroTextBox;
         
         /// <summary>
-        /// descricaoLabel control.
+        /// idLocatario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label descricaoLabel;
+        protected global::System.Web.UI.WebControls.Label idLocatario;
         
         /// <summary>
-        /// descricaoTextBox control.
+        /// idLocatarioTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox descricaoTextBox;
+        protected global::System.Web.UI.WebControls.TextBox idLocatarioTextBox;
         
         /// <summary>
-        /// cadastrarButton control.
+        /// DataReserva control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cadastrarButton;
+        protected global::System.Web.UI.WebControls.Label DataReserva;
         
         /// <summary>
-        /// mensagemLabel control.
+        /// datareservaTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label mensagemLabel;
+        protected global::System.Web.UI.WebControls.TextBox datareservaTextBox;
     }
 }

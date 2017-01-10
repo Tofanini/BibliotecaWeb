@@ -1,57 +1,62 @@
-﻿<%@ Page Title="" Theme="Theme1" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PesquisaLivros.aspx.cs" Inherits="BibliotecaWeb.PesquisaLivros" %>
+﻿<%@ Page Title="Locação de Livro" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Locacao.aspx.cs" Inherits="BibliotecaWeb.Locacao" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
-    <h2>Bom dia!<br />Como deseja fazer a sua busca?</h2>
+    <h2> <%: Page.Title %></h2>
 
+    
 
-    <div class="text1">
-        <asp:Label ID="autorLabel" runat="server" Text="Autor" Font-Bold="true" Font-Size="X-Large"></asp:Label>
-
-        <div>
-            <asp:TextBox CssClass="tb5" ID="autorTextBox" runat="server"></asp:TextBox>
-
-
-        </div>
-
-    </div><br />
-
-    <div class="text1">
-        <asp:Label ID="tituloLabel" runat="server" Text="Título" Font-Bold="true" Font-Size="X-Large"></asp:Label>
+    <div>
+        <asp:Label ID="rgusuarioLabel" runat="server" Text="RG do usuário"></asp:Label>
 
         <div>
-            <asp:TextBox CssClass="tb5" ID="tituloTextBox" runat="server"></asp:TextBox>
 
-
+            <asp:TextBox ID="rgusuarioTextBox" runat="server"></asp:TextBox>
         </div>
 
-    </div><br />
+    </div><br /><br />
 
-
-    <div class="text1">
-        <asp:Label ID="nomeEditoraLabel" runat="server" Text="Editora" Font-Bold="true" Font-Size="X-Large"></asp:Label>
+   <%-- <div>
+        <asp:Label ID="idfuncionarioLabel" runat="server" Text="ID_Funcionário"></asp:Label>
 
         <div>
-            <asp:TextBox CssClass="tb5" ID="editoraTextBox" runat="server"></asp:TextBox>
 
-
+            <asp:TextBox ID="idfuncionarioTextBox" runat="server"></asp:TextBox>
         </div>
 
-    </div><br />
+    </div><br /><br />--%>
 
-
-    <div class="text1">
-        <asp:Label ID="assuntoLabel" runat="server" Text="Assunto" Font-Bold="true" Font-Size="X-Large"></asp:Label>
+    <%--<div>
+        <asp:Label ID="idLivroLabel" runat="server" Text="ID_Livro"></asp:Label>
 
         <div>
-            <asp:TextBox CssClass="tb5" ID="assuntoTextBox" runat="server"></asp:TextBox>
 
-
+            <asp:TextBox ID="idLivroTextBox" runat="server"></asp:TextBox>
         </div>
 
-    </div><br />
+    </div><br /><br />--%>
 
 
-    <div class="text1">
+    <%--<div>
+        <asp:Label ID="datasaidaLabel" runat="server" Text="Data do empréstimo"></asp:Label>
+
+        <div>
+
+            <asp:TextBox ID="datasaidaTextBox" runat="server" TextMode="DateTimeLocal"></asp:TextBox>
+        </div>
+
+    </div><br /><br />--%>
+
+   <%-- <div>
+        <asp:Label ID="dataentregaLabel" runat="server" Text="Data da devolução"></asp:Label>
+
+        <div>
+
+            <asp:TextBox ID="dataentregaTextBox" runat="server" TextMode="DateTimeLocal"></asp:TextBox>
+        </div>
+
+    </div><br /><br />--%>
+
+    <div class="text">
 
 
         <asp:Button ID="pesquisarButton" runat="server" Text="Pesquisar" OnClick="pesquisarButton_Click" />
@@ -63,21 +68,23 @@
 
     </div><br /><br />
 
-    <asp:GridView  ID="livrosGridView" runat="server" Font-Size="X-Large" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" Width="530px" AllowSorting="True" BorderStyle="Solid" EmptyDataText="Nenhum resultado encontrado.">
+    <asp:GridView  ID="locacaoGridView" runat="server" Font-Size="X-Large" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" Width="530px" AllowSorting="True" BorderStyle="Solid" EmptyDataText="Nenhum resultado encontrado.">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="idLivro" HeaderText="ID_Livro" />
             <asp:BoundField DataField="Autor" HeaderText="Autor" />
             <asp:BoundField DataField="Titulo" HeaderText="Título" />
-            <asp:BoundField DataField="nomeEditora" HeaderText="Editora" />
-            <asp:BoundField DataField="Assunto" HeaderText="Assunto" />
+            <asp:BoundField DataField="Nome" HeaderText="Locatário" />
+            <asp:BoundField DataField="RG" HeaderText="RG" />
             <asp:HyperLinkField Text="Detalhes..." DataNavigateUrlFields="idLivro" DataNavigateUrlFormatString="DetalhesLivro.aspx?idLivro={0}" NavigateUrl="~/DetalhesLivro.aspx" />
 
 
             <asp:HyperLinkField NavigateUrl="~/EditarLivro.aspx" Text="Editar"  DataNavigateUrlFormatString="EditarLivro.aspx?idLivro={0}" DataNavigateUrlFields="idLivro" />
                
             
-           <%-- <asp:TemplateField ShowHeader="False">
+
+
+            <%--<asp:TemplateField ShowHeader="False">
             
                 <ItemTemplate>
           <% if (Context.User.Identity.IsAuthenticated) { %>
@@ -85,20 +92,6 @@
         <% } %>
         </ItemTemplate>
         </asp:TemplateField>--%>
-
-
-
-
-
-
-            <asp:TemplateField ShowHeader="False">
-            
-                <ItemTemplate>
-          <% if (Context.User.Identity.IsAuthenticated) { %>
-             <asp:LinkButton ID="Button" runat="server" Text="Reservar" OnCommand="Button_Click" CommandArgument='<%# Eval("idLivro") %>'></asp:LinkButton>
-        <% } %>
-        </ItemTemplate>
-        </asp:TemplateField>
 
             
 
@@ -119,5 +112,23 @@
         
     </asp:GridView>
 
-        
+
+
+    <div>
+        <asp:Label ID="dataLabel" runat="server" Text="Data de Devolução"></asp:Label>
+
+        <div>
+
+            <asp:TextBox ID="dataTextBox" runat="server" TextMode="Date"></asp:TextBox>
+        </div>
+
+    </div><br /><br />
+
+
+    <div class="text">
+
+
+        <asp:Button ID="alocarButton" runat="server" Text="Alocar" OnClick="AlocarButton_Click" />
+    </div><br />
+
 </asp:Content>

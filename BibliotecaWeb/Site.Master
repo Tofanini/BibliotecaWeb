@@ -38,6 +38,7 @@
             </Scripts>
         </asp:ScriptManager>
 
+
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -46,36 +47,71 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/">Minha Biblioteca Web</a>
                 </div>
+
+
                 <div class="navbar-collapse collapse">
+
                     <ul class="nav navbar-nav">
+
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="PesquisaLivros.aspx">PesquisaLivros</a></li>
-        <%--                <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Cadastro
-        <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a runat="server" href="CadastroUsuario.aspx">Usuário</a></li>
-                                <li><a runat="server" href="CadastroEditora.aspx">Editora</a></li>
-                                <li><a runat="server" href="CadastroLivro.aspx">Livro</a></li>
-                                <li><a runat="server" href="CadastroFuncionario">Funcionário</a></li>
-                                <li><a href="#">Perfil</a></li>
-                            </ul>--%>
 
-                            <li><a runat="server" href="~/About">About</a></li>
+
+
+
+                        <%if (Context.User.IsInRole("funcionario"))
+                            { %>
+
+                         <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+                             <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                               <li><a runat="server" href="~/CadastroLivro.aspx">Cad. Livro</a></li>
+                               <li><a runat="server" href="~/CadastroEditora.aspx">Cad. Editora</a></li>
+                            </ul>
+
+                        
+                        <li><a runat="server" href="~/Locacao.aspx">Alocar Livro</a></li>
+
+
+                        
+
+                         <%}
+    else if (Context.User.IsInRole("admin"))
+    { %>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Cadastro
+                             <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                               <li><a runat="server" href="~/Account/RegisterFuncionario.aspx">Funcionário</a></li>
+                               <li><a runat="server" href="~/CadastroLivro.aspx">Livro</a></li>
+                               <li><a runat="server" href="~/CadastroEditora.aspx">Editora</a></li>
+                            </ul>
+
+                        
+                        <li><a runat="server" href="~/Locacao.aspx">Alocar Livro</a></li>                 
+
+                        
+                         <%} %>
+
+                        
+                        <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
+                    
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
+                                <li><a runat="server" href="~/Account/Register">Cadastre-se</a></li>
                                 <li><a runat="server" href="~/Account/Login">Log in</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li><a runat="server" href="~/Account/Manage" title="Gerencie sua conta">Olá, <%: Context.User.Identity.GetUserName()  %> !</a></li>
                                 <li>
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>
@@ -87,12 +123,27 @@
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
+
+        </asp:ContentPlaceHolder>
+            
             <hr />
+        </div>   
+        
+
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Minha Biblioteca Web</p>
             </footer>
-        </div>
-    </form>
+
+   
+
+            </form>
+
+     
+    
 </body>
+
+    
+                
 </html>
+
+

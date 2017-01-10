@@ -13,13 +13,13 @@ namespace BibliotecaWeb {
     public partial class CadastroEditora {
         
         /// <summary>
-        /// nomeLabel control.
+        /// ErrorMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label nomeLabel;
+        protected global::System.Web.UI.WebControls.Literal ErrorMessage;
         
         /// <summary>
         /// nomeTextBox control.
@@ -31,15 +31,6 @@ namespace BibliotecaWeb {
         protected global::System.Web.UI.WebControls.TextBox nomeTextBox;
         
         /// <summary>
-        /// enderecoLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label enderecoLabel;
-        
-        /// <summary>
         /// enderecoTextBox control.
         /// </summary>
         /// <remarks>
@@ -47,15 +38,6 @@ namespace BibliotecaWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox enderecoTextBox;
-        
-        /// <summary>
-        /// bairroLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label bairroLabel;
         
         /// <summary>
         /// bairroTextBox control.
@@ -67,15 +49,6 @@ namespace BibliotecaWeb {
         protected global::System.Web.UI.WebControls.TextBox bairroTextBox;
         
         /// <summary>
-        /// cidadeLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label cidadeLabel;
-        
-        /// <summary>
         /// cidadeTextBox control.
         /// </summary>
         /// <remarks>
@@ -83,15 +56,6 @@ namespace BibliotecaWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox cidadeTextBox;
-        
-        /// <summary>
-        /// UFLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label UFLabel;
         
         /// <summary>
         /// ufDropDownList control.
@@ -103,15 +67,6 @@ namespace BibliotecaWeb {
         protected global::System.Web.UI.WebControls.DropDownList ufDropDownList;
         
         /// <summary>
-        /// telefoneLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label telefoneLabel;
-        
-        /// <summary>
         /// telefoneTextBox control.
         /// </summary>
         /// <remarks>
@@ -121,15 +76,6 @@ namespace BibliotecaWeb {
         protected global::System.Web.UI.WebControls.TextBox telefoneTextBox;
         
         /// <summary>
-        /// cepLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label cepLabel;
-        
-        /// <summary>
         /// cepTextBox control.
         /// </summary>
         /// <remarks>
@@ -137,15 +83,6 @@ namespace BibliotecaWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox cepTextBox;
-        
-        /// <summary>
-        /// cnpjLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label cnpjLabel;
         
         /// <summary>
         /// cnpjTextBox control.

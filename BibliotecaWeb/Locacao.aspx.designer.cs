@@ -10,88 +10,34 @@
 namespace BibliotecaWeb {
     
     
-    public partial class CadastroFuncionario {
+    public partial class Locacao {
         
         /// <summary>
-        /// nomeLabel control.
+        /// rgusuarioLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label nomeLabel;
+        protected global::System.Web.UI.WebControls.Label rgusuarioLabel;
         
         /// <summary>
-        /// nomeTextBox control.
+        /// rgusuarioTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nomeTextBox;
+        protected global::System.Web.UI.WebControls.TextBox rgusuarioTextBox;
         
         /// <summary>
-        /// profissaoLabel control.
+        /// pesquisarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label profissaoLabel;
-        
-        /// <summary>
-        /// profissaoTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox profissaoTextBox;
-        
-        /// <summary>
-        /// idPerfilLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idPerfilLabel;
-        
-        /// <summary>
-        /// idPerfilTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idPerfilTextBox;
-        
-        /// <summary>
-        /// situacaoLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label situacaoLabel;
-        
-        /// <summary>
-        /// situacaoDropDownList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList situacaoDropDownList;
-        
-        /// <summary>
-        /// cadastrarButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cadastrarButton;
+        protected global::System.Web.UI.WebControls.Button pesquisarButton;
         
         /// <summary>
         /// mensagemLabel control.
@@ -101,5 +47,41 @@ namespace BibliotecaWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label mensagemLabel;
+        
+        /// <summary>
+        /// locacaoGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView locacaoGridView;
+        
+        /// <summary>
+        /// dataLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label dataLabel;
+        
+        /// <summary>
+        /// dataTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox dataTextBox;
+        
+        /// <summary>
+        /// alocarButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button alocarButton;
     }
 }

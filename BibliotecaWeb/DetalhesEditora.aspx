@@ -1,13 +1,13 @@
-﻿<%@ Page Title="Detalhes Editora" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DetalhesEditora.aspx.cs" Inherits="BibliotecaWeb.DetalhesEditora" %>
+﻿<%@ Page Title="Detalhes Editora" Theme="Theme4" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DetalhesEditora.aspx.cs" Inherits="BibliotecaWeb.DetalhesEditora" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
-    <h2><%:Page.Title %></h2>
+    <h2 class="h2"><%:Page.Title %></h2>
 
 
     <div>
 
-        <asp:DetailsView ID="EditoraDetailsView" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataKeyNames="nomeEditora" ForeColor="Black" GridLines="None" DataSourceID="SqlDataSource">
+        <asp:DetailsView ID="EditoraDetailsView" Font-Size="X-Large" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataKeyNames="nomeEditora" ForeColor="Black" GridLines="None" DataSourceID="SqlDataSource">
             <AlternatingRowStyle BackColor="PaleGoldenrod" />
             <EditRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
             <Fields>

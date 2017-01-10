@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using Microsoft.AspNet.Identity;
 
 namespace BibliotecaWeb
 {
@@ -16,9 +17,11 @@ namespace BibliotecaWeb
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            
+
         }
 
-
+        
 
         public void LimparTODOSTextBox(Control controle)
         {
@@ -38,6 +41,9 @@ namespace BibliotecaWeb
                 }
             }
         }
+
+
+
 
         protected void pesquisarButton_Click(object sender, EventArgs e)
         {
@@ -91,13 +97,70 @@ namespace BibliotecaWeb
                 mensagemLabel.ForeColor = Color.Red;
             }
         }
-            protected void livrosGridView_SelectedIndexChanged(object sender, EventArgs e)
+        protected void livrosGridView_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (livrosGridView.SelectedIndex >= 0)
                 ViewState["SelectedKey"] = livrosGridView.SelectedValue;
             else
                 ViewState["SelectedKey"] = null;
         }
+
+
+        
+        protected void Button_Click(object sender, EventArgs e)
+        {
+            mensagemLabel.Text = string.Empty;
+            mensagemLabel.ForeColor = Color.Black;
+
+            try
+            {
+
+               
+                using (var cn = new SqlConnection(
+                  ConfigurationManager.ConnectionStrings["Biblioteca"].ConnectionString))
+                {
+                    using (var cmd = new SqlCommand("INSERT INTO Reserva (idLivro, idLocatario, DataReserva) VALUES (@idLivro, @idLocatario, GETDATE())", cn))
+                    {
+
+                        cn.Open();
+
+
+                        cmd.CommandType = CommandType.Text;
+
+                        for (int i = 0; i < livrosGridView.Rows.Count; i++)
+                        {
+                        
+                         
+                            cmd.Parameters.AddWithValue("@idLivro",
+                                Convert.ToInt32(livrosGridView.Rows[i].Cells[0].Text));
+                            cmd.Parameters.AddWithValue("@idLocatario",
+                                Context.User.Identity.GetUserId());
+
+
+                            cmd.ExecuteNonQuery();
+
+                            mensagemLabel.Text = ("Livro Reservado!");
+                        }
+
+
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                mensagemLabel.Text = ex.Message;
+                mensagemLabel.ForeColor = Color.Red;
+            }
+        }
+
+    }
+
+
+    // Add code here to add the item to the shopping cart.
+}
+
+
 
         //protected void livrosGridView_DataBound(object sender, EventArgs e)
         //{
@@ -122,10 +185,10 @@ namespace BibliotecaWeb
         //{
         //    livrosGridView.SelectedIndex = -1;
         //}
-    }
+    
 
-        
-    }
+
+
 
 
 

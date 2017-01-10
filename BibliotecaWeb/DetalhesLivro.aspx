@@ -1,11 +1,11 @@
-﻿<%@ Page Title="Detalhes do Livro" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DetalhesLivro.aspx.cs" Inherits="BibliotecaWeb.EditarLivro" %>
+﻿<%@ Page Title="Detalhes do Livro"Theme="Theme2" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DetalhesLivro.aspx.cs" Inherits="BibliotecaWeb.EditarLivro" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2><%:Page.Title %></h2>
 
     <div>
 
-        <asp:DetailsView ID="LivroDetailsView" runat="server" AutoGenerateRows="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="idLivro" GridLines="Horizontal" Height="50px" Width="125px" DataSourceID="SqlDataSource">
+        <asp:DetailsView ID="LivroDetailsView" runat="server" Font-Size="X-Large" AutoGenerateRows="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="idLivro" GridLines="Horizontal" Height="50px" Width="125px" DataSourceID="SqlDataSource">
             <AlternatingRowStyle BackColor="#F7F7F7" />
             <EditRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
             <Fields>

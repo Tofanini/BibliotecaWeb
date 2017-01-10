@@ -1,13 +1,15 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="BibliotecaWeb._Default" %>
+﻿<%@ Page Title="Home Page" Theme="Theme3" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="BibliotecaWeb._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+
+        <p>Seja Bem-vindo a sua Biblioteca Web!<br /> Você é novo por aqui? Cadastre-se ou faça login!</p>
+        <p><a href="/Account/Register.aspx" class="btn btn-primary btn-lg">Cadastre-se &raquo;</a>
+        <a href="/Account/Login.aspx" class="btn btn-primary btn-lg">Login &raquo;</a></p>
+           
+
     </div>
 
-    <asp:HyperLink ID="memberpageHyperLink" runat="server" NavigateUrl="~/MemberPages/Members.aspx" Text="MemberPage-Only">Bem vindo a sua Biblioteca Web</asp:HyperLink>
 
 </asp:Content>
